@@ -1,5 +1,9 @@
+import Navbar from "../Components/Navbar";
+
 export default function Home() {
   return (
-    <div className='text-3xl'>home 3</div>
+    <div className='min-h-screen bg-background text-primary overflow-x-hidden'>
+      <Navbar />
+    </div>
   )
 }

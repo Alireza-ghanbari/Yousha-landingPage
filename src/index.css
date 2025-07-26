@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #c4c4c4;
+
+  --color-forground: #637381;
+  --color-primary: #212b36;
+  --color-secondary: #8c66fa;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
