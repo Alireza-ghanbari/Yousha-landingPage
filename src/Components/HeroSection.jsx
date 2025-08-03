@@ -1,7 +1,7 @@
 import { FaPlay } from "react-icons/fa";
 import banner from "../assets/banner.jpg";
 import Atropos from "atropos/react";
-import "atropos/css"; // Don't forget the CSS import
+import "atropos/css";
 
 export default function HeroSection() {
   return (
