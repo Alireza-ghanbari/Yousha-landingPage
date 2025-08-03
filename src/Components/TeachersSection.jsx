@@ -71,10 +71,10 @@ export default function TeachersSection() {
                   <div className="absolute w-3 h-3 bg-yellow-400 rounded-full top-4 left-4" />
                   <div className="absolute w-4 h-4 bg-yellow-400 rounded-full bottom-4 left-4" />
                   <div className="absolute w-2 h-2 bg-purple-500 rounded-full bottom-2 left-10" />
-                  <div className="absolute w-4 h-4 bg-purple-500 rounded-full top-6 right-8" />
-                  <div className="absolute w-2 h-2 bg-green-400 rounded-full top-10 right-4" />
+                  <div className="absolute w-4 h-4 bg-purple-500 rounded-full top-6 sm:right-10 right-4" />
+                  <div className="absolute w-2 h-2 bg-green-400 rounded-full top-10 sm:right-4 right-2" />
                   <div className="absolute w-2 h-2 bg-green-400 rounded-full top-10 left-2" />
-                  <div className="absolute w-2.5 h-2.5 bg-green-400 rounded-full bottom-10 left-4" />
+                  <div className="absolute w-2.5 h-2.5 bg-green-400 rounded-full bottom-10 sm:left-4 left-2" />
                 </div>
               </Atropos>
 
