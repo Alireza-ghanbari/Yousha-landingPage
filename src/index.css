@@ -51,3 +51,11 @@ body {
   padding: 0;
   text-align: center;
 }
+
+.swiper-pagination-bullet {
+  @apply w-3 h-3 rounded-full bg-primary/30 transition-all duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !bg-primary scale-125;
+}
