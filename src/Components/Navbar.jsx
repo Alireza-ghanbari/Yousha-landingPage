@@ -27,16 +27,16 @@ export default function Navbar() {
 
   return (
     <div className="w-full container">
-      <nav>
+      <nav className="max-md:px-8 px-0">
         {/* desktop */}
-        <div className="hidden lg:flex items-center justify-between py-3">
-          <img src="/icon.png" alt="logo" className="w-20" />
+        <div className="hidden lg:flex items-center justify-between py-8">
+          <img src="/icon.png" alt="logo" className="w-24" />
           <div className="space-x-8">
             {navItems.map((item, key) => (
               <a
                 href={item.href}
                 key={key}
-                className="font-semibold hover:text-black transition-colors drop-shadow-md drop-shadow-primary/20"
+                className="hover:text-black font-semibold text-xl transition-colors drop-shadow-md drop-shadow-primary/20"
               >
                 {item.name}
               </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
           </div>
           <a
             href="#"
-            className="px-5 py-2 rounded-full bg-secondary text-white font-semibold hover:opacity-95 transition-all border border-transparent hover:border-background/40"
+            className="px-5 py-2 rounded-full bg-secondary text-white text-xl hover:opacity-95 transition-all border border-transparent hover:border-background/40"
           >
             ورود / عضویت
           </a>
@@ -52,24 +52,25 @@ export default function Navbar() {
 
         {/* mobile */}
         <div className="flex lg:hidden justify-between items-center py-3">
-          <img src="/icon.png" alt="logo" className="w-20 select-none" />
+          <img src="/icon.png" alt="logo" className="w-24 select-none" />
 
           <span
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="cursor-pointer text-primary hover:text-black transition-colors z-40"
           >
-            {!isMenuOpen ? <IoMdMenu size={28} /> : <IoMdClose size={28} />}
+            {!isMenuOpen ? <IoMdMenu size={32} /> : <IoMdClose size={32} />}
           </span>
 
           {isMenuOpen && (
             <div className="fixed bg-background/50 backdrop-blur-sm z-30 inset-0 flex flex-col items-center justify-center space-y-8 transition-all duration-300">
               <div className="flex flex-col items-center justify-center space-y-8">
+                <img src="/icon.png" alt="logo" className="w-32" />
                 {navItems.map((item, key) => (
                   <a
                     href={item.href}
                     key={key}
                     onClick={() => setIsMenuOpen(false)}
-                    className="font-semibold hover:text-black transition-colors drop-shadow-md drop-shadow-primary/20 select-none"
+                    className="font-semibold hover:text-black transition-colors drop-shadow-md text-xl drop-shadow-primary/20 select-none"
                   >
                     {item.name}
                   </a>
@@ -78,7 +79,7 @@ export default function Navbar() {
               <a
                 href="#"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-5 py-2 rounded-full bg-secondary text-white font-semibold hover:opacity-95 transition-all border border-transparent hover:border-background/40"
+                className="px-5 py-2 rounded-full bg-secondary text-white hover:opacity-95 transition-all text-xl border border-transparent hover:border-background/40"
               >
                 ورود / عضویت
               </a>
