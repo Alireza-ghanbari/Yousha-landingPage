@@ -20,7 +20,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="w-full container max-sm:px-[1px]">
+    <section className="w-full container max-sm:px-[1px] max-sm:pointer-events-none">
       <Atropos
         className="w-full h-full bg-background inset-0 max-sm:rounded-none rounded-3xl"
         shadow={false}
