@@ -88,13 +88,22 @@ export default function TitleSection() {
     },
   ];
 
-  const AccordionItem = ({ title, number, time, children }) => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleData = showAll ? data : data.slice(0, 3);
+
+  const AccordionItem = ({ title, number, time, children, index }) => {
+    const isOpen = openIndex === index;
+
+    const handleToggle = () => {
+      setOpenIndex(isOpen ? null : index);
+    };
 
     return (
       <div className="bg-white w-full my-4 drop-shadow-[0_0_4px_rgba(0,0,0,0.1)] rounded-2xl flex flex-col items-start justify-between">
         <button
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleToggle}
           className="w-full h-full py-4 px-2 sm:px-6 flex flex-wrap justify-between items-center focus:outline-none"
         >
           <div
@@ -165,20 +174,39 @@ export default function TitleSection() {
   return (
     <section className="w-full py-24 container px-4">
       <h2 className="text-4xl font-bold mb-12">سرفصل های دوره</h2>
-      {data?.map((data) => (
-        <div>
-          <AccordionItem
-            title={data.title}
-            number={data.number}
-            time={data.time}
-          >
-            {{
-              description: data.children.description,
-              tags: data.children.tags,
-            }}
-          </AccordionItem>
-        </div>
+
+      {visibleData.map((item, index) => (
+        <AccordionItem
+          key={index}
+          index={index}
+          title={item.title}
+          number={item.number}
+          time={item.time}
+        >
+          {{
+            description: item.children.description,
+            tags: item.children.tags,
+          }}
+        </AccordionItem>
       ))}
+
+      {!showAll && data.length > 3 && (
+        <div className="mt-12">
+          <button
+            onClick={() => setShowAll(true)}
+            className="font-bold text-secondary text-lg"
+          >
+            نمایش ادامه سر فصل ها
+            <div className="relative flex flex-col items-center justify-center">
+              <TiArrowSortedDown size={36} className="text-secondary/60" />
+              <TiArrowSortedDown
+                size={18}
+                className="absolute text-secondary top-[6.5px] left-[68px]"
+              />
+            </div>
+          </button>
+        </div>
+      )}
     </section>
   );
 }
