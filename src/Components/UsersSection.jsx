@@ -98,7 +98,19 @@ export default function UsersSection() {
         {users.map((user, key) => (
           <SwiperSlide key={key}>
             <div className="flex flex-col space-y-6 items-center justify-center cursor-grab active:cursor-grabbing ">
-              {activeIndex === key && (
+              {width > 1023 ? (
+                activeIndex === key && (
+                  <div className="bg-white rounded-xl flex flex-col space-y-10 items-center justify-between drop-shadow-[0_0_4px_rgba(0,0,0,0.1)] px-2 sm:px-4 py-6">
+                    <p className="text-forground leading-7">
+                      {user.description}
+                    </p>
+                    <button className="flex items-center gap-2 bg-secondary/30 text-secondary font-semibold px-4 py-2 rounded-xl cursor-pointer hover:bg-secondary/40 transition-colors">
+                      <FaPlay size={18} />
+                      مشاهده ویدیو مصاحبه با هنرجو
+                    </button>
+                  </div>
+                )
+              ) : (
                 <div className="bg-white rounded-xl flex flex-col space-y-10 items-center justify-between drop-shadow-[0_0_4px_rgba(0,0,0,0.1)] px-2 sm:px-4 py-6">
                   <p className="text-forground leading-7">{user.description}</p>
                   <button className="flex items-center gap-2 bg-secondary/30 text-secondary font-semibold px-4 py-2 rounded-xl cursor-pointer hover:bg-secondary/40 transition-colors">
@@ -109,7 +121,7 @@ export default function UsersSection() {
               )}
               <div
                 className={`flex flex-col items-center justify-center space-y-4 ${
-                  activeIndex !== key && "opacity-70 scale-75"
+                  activeIndex !== key && "opacity-70 lg:scale-75"
                 }`}
               >
                 <img
