@@ -2,16 +2,31 @@ import { FaPlay } from "react-icons/fa";
 import banner from "../assets/banner.jpg";
 import Atropos from "atropos/react";
 import "atropos/css";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className="w-full container max-sm:px-[1px]">
       <Atropos
         className="w-full h-full bg-background inset-0 max-sm:rounded-none rounded-3xl"
         shadow={false}
-        rotateXMax={2}
-        rotateYMax={2}
-        activeOffset={10}
+        rotateXMax={width > "1024" ? 2 : 0}
+        rotateYMax={width > "1024" ? 2 : 0}
+        activeOffset={width > "1024" ? 10 : 0}
         duration={200}
       >
         <div className="relative max-sm:rounded-none rounded-3xl overflow-hidden h-[550px] ">
