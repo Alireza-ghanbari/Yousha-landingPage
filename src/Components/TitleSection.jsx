@@ -194,7 +194,7 @@ export default function TitleSection() {
         <div className="mt-12">
           <button
             onClick={() => setShowAll(true)}
-            className="font-bold text-secondary text-lg"
+            className="font-bold text-secondary text-lg cursor-pointer"
           >
             نمایش ادامه سر فصل ها
             <div className="relative flex flex-col items-center justify-center">
