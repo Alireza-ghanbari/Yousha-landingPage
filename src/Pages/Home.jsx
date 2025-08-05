@@ -1,3 +1,4 @@
+import FAQSection from "../Components/FAQSection";
 import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
 import TeachersSection from "../Components/TeachersSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <TeachersSection />
       <TitleSection />
       <UsersSection />
+      <FAQSection />
     </div>
   )
 }
