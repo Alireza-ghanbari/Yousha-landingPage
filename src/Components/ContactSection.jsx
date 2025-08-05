@@ -7,10 +7,10 @@ export default function ContactSection() {
     <section className="w-full py-24 container px-4">
       <h2 className="text-4xl font-bold mb-12">نیاز به مشاوره تخصصی دارید</h2>
 
-      <div className="w-full flex flex-col-reverse gap-y-12 gap-x-6 lg:justify-between lg:items-center lg:flex-row">
+      <div className="w-full flex flex-col-reverse gap-y-12 lg:justify-between lg:items-center lg:flex-row">
         <div className="flex flex-1/2 flex-col items-center">
           <p className="font-bold text-xl mb-8">ثبت درخواست مشاوره رایگان</p>
-          <form className="w-full flex flex-col items-start space-y-4">
+          <form className="w-full sm:w-3/4 mx-auto flex flex-col items-start space-y-4">
             <label className="flex w-full gap-2 bg-white rounded-md text-lg px-4 py-3 drop-shadow-[0_0_4px_rgba(0,0,0,0.1)]">
               <FiUser size={24} className="text-forground" />
               <input
