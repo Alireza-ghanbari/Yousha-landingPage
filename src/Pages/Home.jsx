@@ -1,11 +1,11 @@
-import ContactSection from "../Components/ContactSection";
-import FAQSection from "../Components/FAQSection";
-import Footer from "../Components/Footer";
-import HeroSection from "../Components/HeroSection";
 import Navbar from "../Components/Navbar";
-import TeachersSection from "../Components/TeachersSection";
-import TitleSection from "../Components/TitleSection";
-import UsersSection from "../Components/UsersSection";
+import HeroSection from "../Components/Home/HeroSection";
+import TeachersSection from "../Components/Home/TeachersSection";
+import TitleSection from "../Components/Home/TitleSection";
+import UsersSection from "../Components/Home/UsersSection";
+import FAQSection from "../Components/Home/FAQSection";
+import ContactSection from "../Components/Home/ContactSection";
+import Footer from "../Components/Footer";
 
 export default function Home() {
   return (

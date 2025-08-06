@@ -1,7 +1,7 @@
+import teacher1 from "../../assets/teacher.png";
+import teacher2 from "../../assets/teacher2.png";
+import teacher3 from "../../assets/teacher3.png";
 import Atropos from "atropos/react";
-import teacher1 from "../assets/teacher.png";
-import teacher2 from "../assets/teacher2.png";
-import teacher3 from "../assets/teacher3.png";
 import "atropos/css";
 
 import { Swiper, SwiperSlide } from "swiper/react";

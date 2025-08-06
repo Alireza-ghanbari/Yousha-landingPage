@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import banner from "../assets/banner.jpg";
+import banner from "../../assets/banner.jpg";
 import Atropos from "atropos/react";
 import "atropos/css";
-import { useEffect, useState } from "react";
 
 export default function HeroSection() {
   const [width, setWidth] = useState(window.innerWidth);

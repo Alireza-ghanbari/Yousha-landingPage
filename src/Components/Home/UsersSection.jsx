@@ -1,17 +1,19 @@
-import user1 from "../assets/user1.jpg";
-import user2 from "../assets/user2.jpg";
-import user3 from "../assets/user3.jpg";
-import user4 from "../assets/user4.jpg";
-import user5 from "../assets/user5.png";
-import user6 from "../assets/user6.jpg";
+import { useEffect, useState } from "react";
+
+import user1 from "../../assets/user1.jpg";
+import user2 from "../../assets/user2.jpg";
+import user3 from "../../assets/user3.jpg";
+import user4 from "../../assets/user4.jpg";
+import user5 from "../../assets/user5.png";
+import user6 from "../../assets/user6.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+
 import { FaPlay } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { EffectCoverflow } from "swiper/modules";
 
 const users = [
   {

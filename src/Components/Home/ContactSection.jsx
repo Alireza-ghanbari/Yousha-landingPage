@@ -1,6 +1,6 @@
 import { FiUser } from "react-icons/fi";
 import { MdOutlineEmail, MdOutlineStickyNote2 } from "react-icons/md";
-import contact from "../assets/contact.png";
+import contact from "../../assets/contact.png";
 
 export default function ContactSection() {
   return (
