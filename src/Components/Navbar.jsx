@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const navItems = [
@@ -12,6 +13,8 @@ export default function Navbar() {
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -43,8 +46,8 @@ export default function Navbar() {
             ))}
           </div>
           <a
-            href="#"
-            className="px-5 py-2 rounded-full bg-secondary text-white text-xl hover:opacity-95 transition-all border border-transparent hover:border-background/40"
+            className="px-5 py-2 rounded-full bg-secondary text-white text-xl hover:opacity-95 transition-all border border-transparent hover:border-background/40 cursor-pointer"
+            onClick={() => navigate("/login")}
           >
             ورود / عضویت
           </a>
@@ -77,9 +80,8 @@ export default function Navbar() {
                 ))}
               </div>
               <a
-                href="#"
-                onClick={() => setIsMenuOpen(false)}
-                className="px-5 py-2 rounded-full bg-secondary text-white hover:opacity-95 transition-all text-xl border border-transparent hover:border-background/40"
+                onClick={() => navigate("/login")}
+                className="px-5 py-2 rounded-full bg-secondary text-white hover:opacity-95 transition-all text-xl border border-transparent hover:border-background/40 cursor-pointer"
               >
                 ورود / عضویت
               </a>
